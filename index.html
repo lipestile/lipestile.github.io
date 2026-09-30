@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | TOTVS Full Stack & Data Analytics</title>
+  <meta name="description" content="Portfolio de Desenvolvedor Full Stack TOTVS (Protheus & Fluig) e Analista de Dados com Python. Especialista em integrações ERP, automações e inteligência de negócios." />
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TOTVS Full Stack Developer & Data Analyst" />
+  <meta property="og:description" content="Engenharia de ERP, Ecossistema TOTVS (Protheus & Fluig), Full Stack e Inteligência de Dados com Python." />
+  
+  <!-- Fontes Google: Syne (luxo/editorial) + Plus Jakarta Sans (leitura técnica impecável) + JetBrains Mono (código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN para renderização imediata sem compilação prévia -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            carbon: '#08080c',
+            gold: {
+              100: '#fef9e7',
+              200: '#faecc3',
+              300: '#eed68e',
+              400: '#d4af37',
+              500: '#bfa132',
+              600: '#997e24',
+            },
+            accent: {
+              blue: '#3b82f6',
+              indigo: '#6366f1',
+              cyan: '#06b6d4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Estilos customizados e efeitos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-carbon text-luxury-light antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Canvas de Fundo de Malha Tecnológica (Interativo / Suave) -->
+  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  
+  <!-- Glows Ambientais Gradientes -->
+  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-gold-500/5 blur-[160px] rounded-full pointer-events-none -z-10"></div>
+  <div class="fixed bottom-1/4 right-10 w-[500px] h-[500px] bg-accent-blue/5 blur-[180px] rounded-full pointer-events-none -z-10"></div>
+
+  <!-- Barra de Navegação Flutuante Glassmorphism -->
+  <header class="fixed top-5 left-0 right-0 z-50 px-4">
+    <div class="max-w-6xl mx-auto backdrop-blur-xl bg-[#0c0c11]/75 border border-white/10 rounded-2xl px-6 py-3.5 flex items-center justify-between shadow-2xl transition-all duration-300">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-gold-500/20 to-gold-400/80 border border-gold-400/40 flex items-center justify-center text-gold-200 font-mono font-bold text-sm shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:scale-105 transition-transform">
+          &lt;/&gt;
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-sm tracking-wider text-white group-hover:text-gold-300 transition-colors uppercase">
+            Dev &bull; Analytics
+          </span>
+          <span class="text-[10px] font-mono text-zinc-400 tracking-tight">TOTVS &bull; FLUIG &bull; PYTHON</span>
+        </div>
+      </a>
+
+      <!-- Menu Links Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-400">
+        <a href="#especialidades" class="hover:text-gold-300 transition-colors">Especialidades</a>
+        <a href="#terminal" class="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Terminal Dev
+        </a>
+        <a href="#solucoes" class="hover:text-gold-300 transition-colors">Soluções & Projetos</a>
+        <a href="#stack" class="hover:text-gold-300 transition-colors">Stack Técnica</a>
+      </nav>
+
+      <!-- CTA Contato -->
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="relative group overflow-hidden rounded-xl p-[1px] font-mono text-xs uppercase tracking-wider">
+          <span class="absolute inset-0 bg-gradient-to-r from-gold-400 via-amber-200 to-gold-500 rounded-xl transition-all duration-300 group-hover:opacity-100 opacity-80"></span>
+          <span class="relative block px-4 py-2 rounded-[11px] bg-[#0d0d12] text-gold-200 font-semibold transition-colors duration-300 group-hover:bg-transparent group-hover:text-black">
+            Iniciar Conversa &rarr;
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28 md:pt-36">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="min-h-[85vh] flex flex-col justify-center items-center text-center px-4 relative max-w-5xl mx-auto pb-16">
+      
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-gold-500/20 text-gold-300/90 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        Engenharia de Software Corporativo &bull; Disponível para Novos Projetos
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] max-w-4xl mb-6">
+        Ecossistema <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-amber-200 to-gold-500">TOTVS</span>, 
+        Web Full Stack &amp; <span class="italic font-light font-sans text-zinc-300">Inteligência de Dados.</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-zinc-400 text-base sm:text-lg lg:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
+        Especialista em unir o coração dos processos empresariais no <span class="text-zinc-200 font-medium">Protheus & Fluig</span> a interfaces modernas e pipelines preditivos em <span class="text-zinc-200 font-medium">Python & Data Analytics</span>.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="#solucoes" class="px-7 py-3.5 rounded-xl bg-gold-400 text-black font-semibold text-xs uppercase tracking-widest hover:bg-gold-300 transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.25)] hover:scale-[1.02] flex items-center gap-2">
+          Ver Casos de Sucesso
+          <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#terminal" class="px-7 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white font-mono text-xs tracking-wider transition-all duration-300 hover:border-gold-400/40 flex items-center gap-2">
+          <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
+          Testar Terminal Interativo
+        </a>
+      </div>
+
+      <!-- Key Quantitative Highlights -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl pt-8 border-t border-white/5">
+        <div class="p-5 rounded-2xl bg-[#0f0f15]/60 border border-white/5 text-left hover:border-gold-500/20 transition-all">
+          <div class="text-gold-300 font-mono text-2xl lg:text-3xl font-bold mb-1">ADVPL / TL++</div>
+          <div class="text-zinc-500 text-xs uppercase tracking-wider font-mono">Customizações &amp; REST</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#0f0f15]/60 border border-white/5 text-left hover:border-gold-500/20 transition-all">
+          <div class="text-gold-300 font-mono text-2xl lg:text-3xl font-bold mb-1">Fluig BPM</div>
+          <div class="text-zinc-500 text-xs uppercase tracking-wider font-mono">Workflows &amp; WCM</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#0f0f15]/60 border border-white/5 text-left hover:border-gold-500/20 transition-all">
+          <div class="text-gold-300 font-mono text-2xl lg:text-3xl font-bold mb-1">Python Data</div>
+          <div class="text-zinc-500 text-xs uppercase tracking-wider font-mono">ETL &amp; Analytics</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#0f0f15]/60 border border-white/5 text-left hover:border-gold-500/20 transition-all">
+          <div class="text-gold-300 font-mono text-2xl lg:text-3xl font-bold mb-1">Full Stack</div>
+          <div class="text-zinc-500 text-xs uppercase tracking-wider font-mono">Modern Web &amp; APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PILARES & ESPECIALIDADES ==================== -->
+    <section id="especialidades" class="py-24 px-4 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-gold-400 font-mono text-xs uppercase tracking-widest block mb-3">// Pilares de Atuação</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Arquitetura Técnica de Alto Impacto
+        </h2>
+        <p class="text-zinc-400 text-sm mt-3">
+          Unindo a robustez do ERP empresarial com a flexibilidade da web moderna e a precisão da ciência de dados.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: TOTVS & Fluig -->
+        <div class="spotlight-card group relative p-8 rounded-3xl bg-[#0e0e14] border border-white/[0.08] hover:border-gold-400/40 transition-all duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-300 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-gold-400/90 block mb-2">Core ERP &amp; Automação</span>
+          <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors">
+            TOTVS Protheus &amp; Fluig
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+            Desenvolvimento de regras críticas em ADVPL e TL++, criação de APIs REST corporativas, parametrização avançada de módulos e orquestração de processos no Fluig (BPM, ECM e WCM).
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-zinc-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> ADVPL, TL++, Web Services REST/SOAP</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Workflows Fluig &amp; Scripts de Eventos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> PO-UI e interfaces integradas ao ERP</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Análise de Dados & Python -->
+        <div class="spotlight-card group relative p-8 rounded-3xl bg-[#0e0e14] border border-white/[0.08] hover:border-gold-400/40 transition-all duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-300 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-cyan-400/90 block mb-2">Engenharia &amp; Insights</span>
+          <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-cyan-200 transition-colors">
+            Data Analytics com Python
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+            Extração, transformação e enriquecimento de dados operacionais (ETL). Automações em Python para eliminar retrabalho manual e criação de visões analíticas para tomada de decisão.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-zinc-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Pipelines ETL &amp; Pandas, NumPy</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> SQL Avançado (SQL Server, Oracle, Postgres)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Automação de relatórios e rotinas críticas</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Full Stack & Integrações Modernas -->
+        <div class="spotlight-card group relative p-8 rounded-3xl bg-[#0e0e14] border border-white/[0.08] hover:border-gold-400/40 transition-all duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-400/20 flex items-center justify-center text-indigo-300 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-indigo-400/90 block mb-2">Web Moderna &amp; Microsserviços</span>
+          <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-indigo-200 transition-colors">
+            Full Stack &amp; Integrações
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+            Construção de pontes de comunicação seguras entre o ERP e sistemas externos (e-commerce, CRM, portais B2B) com Node.js, TypeScript e arquitetura baseada em eventos.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-zinc-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> JavaScript, TypeScript, Node.js, Frontend</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Webhooks, Arquitetura RESTful &amp; Middleware</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Git, CI/CD e boas práticas de código limpo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TERMINAL INTERATIVO (EXPERIÊNCIA TÉCNICA) ==================== -->
+    <section id="terminal" class="py-20 px-4 max-w-5xl mx-auto">
+      <div class="bg-[#0b0b10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl">
+        
+        <!-- Terminal Header -->
+        <div class="bg-[#121219] px-4 py-3 border-b border-white/5 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+            <span class="ml-3 font-mono text-xs text-zinc-400 flex items-center gap-1.5">
+              <i data-lucide="terminal" class="w-3.5 h-3.5 text-gold-400"></i>
+              totvs-developer@enterprise-node: ~ (zsh)
+            </span>
+          </div>
+          <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider hidden sm:inline-block">Interativo &bull; Experimente Comandos</span>
+        </div>
+
+        <!-- Terminal Quick Action Bar -->
+        <div class="bg-[#0e0e15] px-4 py-2 border-b border-white/5 flex flex-wrap items-center gap-2 text-xs font-mono">
+          <span class="text-zinc-500 text-[11px]">Comandos rápidos:</span>
+          <button onclick="runQuickCommand('skills')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">skills</button>
+          <button onclick="runQuickCommand('totvs')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">totvs</button>
+          <button onclick="runQuickCommand('fluig')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">fluig</button>
+          <button onclick="runQuickCommand('python')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">python</button>
+          <button onclick="runQuickCommand('cases')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">cases</button>
+          <button onclick="runQuickCommand('contact')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-gold-500/20 hover:text-gold-300 text-zinc-300 transition-colors">contact</button>
+          <button onclick="runQuickCommand('clear')" class="px-2.5 py-1 rounded bg-white/5 hover:bg-red-500/20 hover:text-red-300 text-zinc-400 transition-colors ml-auto">clear</button>
+        </div>
+
+        <!-- Terminal Body -->
+        <div id="terminal-output" class="p-6 font-mono text-xs sm:text-sm leading-relaxed max-h-[380px] overflow-y-auto space-y-3 text-zinc-300">
+          <div class="text-zinc-500">
+            TOTVS & Data Intelligence Console [Versão 2.4.0-LTS]<br/>
+            Digite <span class="text-gold-300">help</span> para listar todos os comandos disponíveis ou clique nos botões acima.
+          </div>
+          <div class="text-zinc-300">
+            <span class="text-emerald-400">➜</span> <span class="text-cyan-400">~</span> <span class="text-zinc-400">totvs status --full</span><br/>
+            <span class="text-gold-300 font-semibold">[OK]</span> TOTVS Protheus ADVPL/TL++ Engine: <span class="text-emerald-400">Pronto</span><br/>
+            <span class="text-gold-300 font-semibold">[OK]</span> Fluig Workflow & ECM Integration: <span class="text-emerald-400">Ativo</span><br/>
+            <span class="text-gold-300 font-semibold">[OK]</span> Python Analytics & Pipeline ETL: <span class="text-emerald-400">Conectado</span><br/>
+            <span class="text-gold-300 font-semibold">[OK]</span> Full Stack REST Middleware: <span class="text-emerald-400">Escalável</span>
+          </div>
+        </div>
+
+        <!-- Terminal Input Line -->
+        <form id="terminal-form" class="bg-[#121219]/80 px-6 py-3.5 border-t border-white/5 flex items-center gap-3">
+          <span class="text-emerald-400 font-mono text-sm">➜</span>
+          <span class="text-cyan-400 font-mono text-sm">~</span>
+          <input 
+            type="text" 
+            id="terminal-input" 
+            class="flex-1 bg-transparent border-none outline-none font-mono text-sm text-gold-200 placeholder:text-zinc-600"
+            placeholder="Digite um comando (ex: skills, fluig, python, contact)..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button type="submit" class="text-xs font-mono text-zinc-500 hover:text-gold-300 transition-colors uppercase">
+            Executar [Enter]
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== CASES & SOLUÇÕES REAIS ==================== -->
+    <section id="solucoes" class="py-24 px-4 max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-gold-400 font-mono text-xs uppercase tracking-widest block mb-3">// Casos Práticos</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Engenharia Aplicada ao Negócio
+          </h2>
+          <p class="text-zinc-400 text-sm mt-2 max-w-xl">
+            Soluções que resolvem gargalos operacionais, integram ecossistemas heterogêneos e extraem inteligência pura de grandes volumes de dados.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-zinc-400">Filtro ativo:</span>
+          <span class="px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-mono">Todos os Cases</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Case 1 -->
+        <div class="group relative rounded-3xl bg-[#0c0c12] border border-white/10 p-8 hover:border-gold-400/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-md bg-gold-400/10 text-gold-300 border border-gold-400/20">
+                TOTVS Protheus &bull; ADVPL REST
+              </span>
+              <span class="text-zinc-500 text-xs font-mono">Integração ERP</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors">
+              Middleware de Sincronização em Tempo Real (ERP &harr; Plataformas)
+            </h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Desenvolvimento de APIs RESTful em TL++/ADVPL para expor rotinas de estoque, faturamento e pedidos para sistemas externos com autenticação OAuth2, retry queue e logging de transações.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex flex-wrap items-center gap-2 text-[11px] font-mono text-zinc-400">
+            <span class="px-2 py-1 rounded bg-white/5">TL++ / ADVPL</span>
+            <span class="px-2 py-1 rounded bg-white/5">REST API</span>
+            <span class="px-2 py-1 rounded bg-white/5">JSON</span>
+            <span class="px-2 py-1 rounded bg-white/5">SQL Server</span>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="group relative rounded-3xl bg-[#0c0c12] border border-white/10 p-8 hover:border-gold-400/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-md bg-cyan-400/10 text-cyan-300 border border-cyan-400/20">
+                Fluig BPM &bull; ECM &bull; WCM
+              </span>
+              <span class="text-zinc-500 text-xs font-mono">Governança Ágil</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-cyan-200 transition-colors">
+              Esteira de Aprovações &amp; Processos Automatizados no Fluig
+            </h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Criação de formulários responsivos e workflows complexos com regras dinâmicas de alçada, disparo de notificações e integração nativa com os módulos de compras e financeiro do Protheus.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex flex-wrap items-center gap-2 text-[11px] font-mono text-zinc-400">
+            <span class="px-2 py-1 rounded bg-white/5">Fluig BPM</span>
+            <span class="px-2 py-1 rounded bg-white/5">JavaScript</span>
+            <span class="px-2 py-1 rounded bg-white/5">Eventos de Processo</span>
+            <span class="px-2 py-1 rounded bg-white/5">Datasets Fluig</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="group relative rounded-3xl bg-[#0c0c12] border border-white/10 p-8 hover:border-gold-400/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-md bg-indigo-400/10 text-indigo-300 border border-indigo-400/20">
+                Python &bull; Engenharia de Dados
+              </span>
+              <span class="text-zinc-500 text-xs font-mono">Analytics &amp; BI</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-indigo-200 transition-colors">
+              Pipeline Automatizado de ETL &amp; Insights Financeiros
+            </h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Scripts modulares em Python com Pandas para consolidação de bases heterogêneas do ERP, validação de regras de conciliação bancária e geração de relatórios de anomalias com envio programado.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex flex-wrap items-center gap-2 text-[11px] font-mono text-zinc-400">
+            <span class="px-2 py-1 rounded bg-white/5">Python 3.x</span>
+            <span class="px-2 py-1 rounded bg-white/5">Pandas</span>
+            <span class="px-2 py-1 rounded bg-white/5">SQL Queries Avançadas</span>
+            <span class="px-2 py-1 rounded bg-white/5">Automação Cron</span>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="group relative rounded-3xl bg-[#0c0c12] border border-white/10 p-8 hover:border-gold-400/40 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-md bg-emerald-400/10 text-emerald-300 border border-emerald-400/20">
+                Full Stack &bull; PO-UI
+              </span>
+              <span class="text-zinc-500 text-xs font-mono">Modern UI</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-emerald-200 transition-colors">
+              Painel Web Corporativo com Design System PO-UI
+            </h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Interface amigável para operadores de chão de fábrica e analistas, reduzindo o tempo de treinamento e eliminando telas complexas do ERP através de uma SPA fluida e responsiva.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 flex flex-wrap items-center gap-2 text-[11px] font-mono text-zinc-400">
+            <span class="px-2 py-1 rounded bg-white/5">PO-UI</span>
+            <span class="px-2 py-1 rounded bg-white/5">Node.js</span>
+            <span class="px-2 py-1 rounded bg-white/5">TypeScript</span>
+            <span class="px-2 py-1 rounded bg-white/5">REST TOTVS</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== STACK TÉCNICA E MATRIZ DE COMPETÊNCIAS ==================== -->
+    <section id="stack" class="py-24 px-4 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-gold-400 font-mono text-xs uppercase tracking-widest block mb-3">// Arsenal Tecnológico</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Competências &amp; Ferramentas
+        </h2>
+        <p class="text-zinc-400 text-sm mt-3">
+          Domínio das tecnologias clássicas e modernas que mantêm a operação estável e inovadora.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Grupo 1 -->
+        <div class="p-6 rounded-2xl bg-[#0c0c12] border border-white/5 hover:border-gold-500/20 transition-all">
+          <div class="text-gold-300 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="database" class="w-4 h-4 text-gold-400"></i>
+            TOTVS &amp; ERP
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-200">ADVPL / TL++</span>
+              <span class="text-gold-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gold-400 h-full w-[95%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">TOTVS Protheus</span>
+              <span class="text-gold-400">Especialista</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gold-400 h-full w-[92%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Fluig BPM / ECM</span>
+              <span class="text-gold-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gold-400 h-full w-[90%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">PO-UI / Totvs REST</span>
+              <span class="text-gold-400">Sólido</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gold-400 h-full w-[88%]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 2 -->
+        <div class="p-6 rounded-2xl bg-[#0c0c12] border border-white/5 hover:border-cyan-500/20 transition-all">
+          <div class="text-cyan-300 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="line-chart" class="w-4 h-4 text-cyan-400"></i>
+            Data &amp; Python
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-200">Python 3.x</span>
+              <span class="text-cyan-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-cyan-400 h-full w-[90%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Pandas &amp; NumPy</span>
+              <span class="text-cyan-400">Sólido</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-cyan-400 h-full w-[88%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">SQL Queries / ETL</span>
+              <span class="text-cyan-400">Especialista</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-cyan-400 h-full w-[94%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Data Viz / Dashboards</span>
+              <span class="text-cyan-400">Sólido</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-cyan-400 h-full w-[85%]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 3 -->
+        <div class="p-6 rounded-2xl bg-[#0c0c12] border border-white/5 hover:border-indigo-500/20 transition-all">
+          <div class="text-indigo-300 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="code" class="w-4 h-4 text-indigo-400"></i>
+            Full Stack Web
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-200">JavaScript / TS</span>
+              <span class="text-indigo-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-indigo-400 h-full w-[88%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Node.js &amp; APIs</span>
+              <span class="text-indigo-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-indigo-400 h-full w-[86%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">HTML5 / CSS3 / Tailwind</span>
+              <span class="text-indigo-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-indigo-400 h-full w-[90%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Arquitetura REST</span>
+              <span class="text-indigo-400">Especialista</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-indigo-400 h-full w-[92%]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 4 -->
+        <div class="p-6 rounded-2xl bg-[#0c0c12] border border-white/5 hover:border-emerald-500/20 transition-all">
+          <div class="text-emerald-300 font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="server" class="w-4 h-4 text-emerald-400"></i>
+            Bancos &amp; DevOps
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-200">SQL Server &amp; Oracle</span>
+              <span class="text-emerald-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-400 h-full w-[92%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Git &amp; GitHub CI/CD</span>
+              <span class="text-emerald-400">Avançado</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-400 h-full w-[88%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Postman / Insomnia</span>
+              <span class="text-emerald-400">Especialista</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-400 h-full w-[95%]"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono pt-2">
+              <span class="text-zinc-200">Docker / Ambientes</span>
+              <span class="text-emerald-400">Sólido</span>
+            </div>
+            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-400 h-full w-[80%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION / CONTATO LUXO ==================== -->
+    <section id="contato" class="py-24 px-4 max-w-4xl mx-auto">
+      <div class="relative rounded-3xl bg-gradient-to-b from-[#12121c] to-[#0a0a0f] border border-gold-500/30 p-8 sm:p-14 text-center overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.8)]">
+        
+        <!-- Luz de Fundo Elegante -->
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-80 h-80 bg-gold-400/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <span class="text-gold-400 font-mono text-xs uppercase tracking-widest block mb-4">// Conexão Profissional</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+          Pronto para elevar o nível da sua operação?
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed">
+          Seja para desenvolver customizações críticas no TOTVS Protheus, criar fluxos inteligentes no Fluig, construir integrações web ou transformar bases de dados com Python.
+        </p>
+
+        <!-- Ações de Contato Rápidas -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <!-- Botão Copiar E-mail -->
+          <button 
+            id="copy-email-btn"
+            data-email="seu.email@exemplo.com"
+            class="px-6 py-3.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-white font-mono text-xs tracking-wider transition-all duration-300 flex items-center gap-2.5 hover:border-gold-400/40"
+          >
+            <i data-lucide="copy" class="w-4 h-4 text-gold-400"></i>
+            <span id="copy-email-text">Copiar E-mail</span>
+          </button>
+
+          <!-- Botão WhatsApp -->
+          <a 
+            href="https://wa.me/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-mono text-xs tracking-wider transition-all duration-300 flex items-center gap-2.5"
+          >
+            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+            WhatsApp Direto
+          </a>
+
+          <!-- Botão LinkedIn -->
+          <a 
+            href="https://linkedin.com/in/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 font-mono text-xs tracking-wider transition-all duration-300 flex items-center gap-2.5"
+          >
+            <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+            LinkedIn
+          </a>
+
+          <!-- Botão GitHub -->
+          <a 
+            href="https://github.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 font-mono text-xs tracking-wider transition-all duration-300 flex items-center gap-2.5"
+          >
+            <i data-lucide="github" class="w-4 h-4 text-zinc-300"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Minimalista -->
+  <footer class="py-12 border-t border-white/5 text-center text-xs font-mono text-zinc-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; 2026 &bull; Desenvolvedor Full Stack TOTVS &amp; Analista de Dados
+      </div>
+      <div class="flex items-center gap-6 text-zinc-400">
+        <a href="#hero" class="hover:text-gold-300 transition-colors">Voltar ao Topo &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Flutuante de Feedback -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-[#151520] border border-gold-400/40 text-gold-200 px-5 py-3 rounded-xl shadow-2xl font-mono text-xs flex items-center gap-2">
+      <i data-lucide="check-circle" class="w-4 h-4 text-gold-400"></i>
+      <span id="toast-message">E-mail copiado para a área de transferência!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Inicializa os ícones do Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
