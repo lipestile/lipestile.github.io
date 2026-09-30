@@ -1,34 +1,21 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# Script de Deploy Automático para GitHub Pages
+# Script de Deploy Automático para Felipe Carvalho - GitHub Pages
 # ==============================================================================
 
 set -e
 
-echo ""
-echo "✨ Iniciando Deploy Automático do Portfólio High-End no GitHub Pages..."
-echo "----------------------------------------------------------------------"
-
-# Verificar se o usuário do GitHub foi passado ou solicitar
-if [ -z "$1" ]; then
-  read -p "👉 Digite o seu nome de usuário do GitHub: " GITHUB_USER
-else
-  GITHUB_USER="$1"
-fi
-
-if [ -z "$GITHUB_USER" ]; then
-  echo "❌ Usuário do GitHub não informado. Abortando."
-  exit 1
-fi
-
+GITHUB_USER="felipecarvalho"
 REPO_NAME="${GITHUB_USER}.github.io"
 REPO_URL="https://github.com/${GITHUB_USER}/${REPO_NAME}.git"
 
 echo ""
-echo "📦 Configurando repositório remoto para: $REPO_URL"
+echo "✨ Iniciando Deploy do Portfólio de Felipe Carvalho..."
+echo "📦 Repositório de Destino: $REPO_URL"
+echo "----------------------------------------------------------------------"
 
-# Garantir que a branch se chama main
+# Garantir que a branch principal é a main
 git branch -M main
 
 # Configurar remote origin
@@ -39,14 +26,14 @@ else
 fi
 
 echo "🚀 Enviando arquivos para o GitHub..."
-echo "ℹ️  Se o Git pedir login, use o seu usuário e Personal Access Token (ou autorize via navegador)."
+echo "ℹ️  Dica: Se solicitado, autentique com seu usuário do GitHub e Personal Access Token (ou chave SSH)."
 echo ""
 
 git push -u origin main
 
 echo ""
-echo "🎉 SUCESSO ABSOLUTO!"
+echo "🎉 SUCESSO! Landing page publicada com sucesso!"
 echo "----------------------------------------------------------------------"
-echo "Sua landing page estará ativa em alguns instantes em:"
+echo "Acesse em alguns instantes no seu endereço oficial:"
 echo "👉 https://${GITHUB_USER}.github.io"
 echo "----------------------------------------------------------------------"
