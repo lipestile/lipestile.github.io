@@ -80,6 +80,7 @@
 
       <!-- Menu Links Desktop -->
       <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-zinc-400">
+        <a href="#perfil" class="hover:text-gold-300 transition-colors">Perfil</a>
         <a href="#especialidades" class="hover:text-gold-300 transition-colors">Especialidades</a>
         <a href="#terminal" class="hover:text-gold-300 transition-colors flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -158,6 +159,202 @@
           <div class="text-gold-300 font-mono text-2xl lg:text-3xl font-bold mb-1">Full Stack</div>
           <div class="text-zinc-500 text-xs uppercase tracking-wider font-mono">Modern Web &amp; APIs</div>
         </div>
+      </div>
+    </section>
+
+    <!-- ==================== PERFIL DO DESENVOLVEDOR (ESTILO SCI-FI & COCKPIT LUXO) ==================== -->
+    <section id="perfil" class="py-16 px-4 max-w-6xl mx-auto">
+      <div class="relative rounded-3xl bg-[#0b0b11]/90 border border-white/10 p-6 sm:p-10 lg:p-12 shadow-[0_0_80px_rgba(0,0,0,0.7)] backdrop-blur-2xl overflow-hidden">
+        
+        <!-- Luzes e Acentos de Fundo -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-gold-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-600/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- COLUNA ESQUERDA: Card Pessoal com Avatar Real, Status e Acadêmico (lg:col-span-4) -->
+          <div class="lg:col-span-4 flex flex-col items-center text-center lg:items-start lg:text-left">
+            
+            <!-- Foto de Perfil com Anel de Neon Orbital -->
+            <div class="relative mb-6 group">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1 bg-gradient-to-tr from-gold-400 via-amber-200 to-cyan-400 shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-transform duration-500 group-hover:scale-105">
+                <img 
+                  src="https://avatars.githubusercontent.com/u/104180105?v=4" 
+                  alt="Felipe Carvalho (@lipestile)" 
+                  class="w-full h-full object-cover rounded-full border-2 border-[#0b0b11]"
+                  loading="lazy"
+                />
+              </div>
+              <!-- Status Online Pulsante -->
+              <div class="absolute bottom-2 right-2 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c0c14] border border-emerald-500/40 text-[11px] font-mono text-emerald-300 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>Online</span>
+              </div>
+            </div>
+
+            <!-- Nome & Handle -->
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Felipe Carvalho
+            </h3>
+            <span class="text-xs font-mono text-zinc-400 tracking-wider mb-2">
+              @lipestile &bull; he/him
+            </span>
+
+            <div class="inline-block px-3 py-1 rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-300 font-mono text-xs mb-6">
+              TOTVS Full Stack &bull; Data Analyst
+            </div>
+
+            <!-- Métricas Pessoais Rápidas -->
+            <div class="grid grid-cols-2 gap-3 w-full mb-6">
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-white">47+</div>
+                <div class="text-[10px] font-mono text-zinc-400 uppercase">Repositórios</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-gold-300">30+</div>
+                <div class="text-[10px] font-mono text-zinc-400 uppercase">Conexões</div>
+              </div>
+            </div>
+
+            <!-- Dados de Formação & Base -->
+            <div class="w-full space-y-3 text-xs font-mono text-zinc-300 border-t border-white/5 pt-5 mb-6">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                <span>ADS &bull; <strong>IESB</strong></span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="book-open" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Eng. Software &bull; <strong>Anhanguera</strong></span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Brasília, DF &bull; Brasil</span>
+              </div>
+            </div>
+
+            <!-- Botões Sociais -->
+            <div class="flex items-center gap-2 w-full justify-center lg:justify-start">
+              <a href="https://github.com/lipestile" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+              <a href="https://linkedin.com/in/felipecarvalho" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 transition-all">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </a>
+              <a href="#contato" class="p-2.5 rounded-xl bg-gold-400/10 hover:bg-gold-400/20 border border-gold-400/30 text-gold-300 transition-all">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- COLUNA DIREITA: Manifesto Holocron, Badges de Sistema e Arcos Técnicos (lg:col-span-8) -->
+          <div class="lg:col-span-8">
+            
+            <!-- Barra de Badges de Sistema Estilo Sci-Fi High-End -->
+            <div class="flex flex-wrap items-center gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#13131c] border border-white/10 text-xs font-mono text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                Base: <strong class="text-white">Brasília, DF</strong>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#13131c] border border-white/10 text-xs font-mono text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                OS: <strong class="text-white">macOS &bull; Linux &bull; Win 11</strong>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#13131c] border border-white/10 text-xs font-mono text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                DevOps: <strong class="text-white">CI/CD Ativo</strong>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-gold-400/10 border border-gold-400/30 text-xs font-mono text-gold-300 sm:ml-auto">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                Holocron Architecture
+              </span>
+            </div>
+
+            <!-- Título do Manifesto -->
+            <div class="mb-6">
+              <div class="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-widest mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 inline-block shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
+                Core Architecture &bull; Filosofia de Engenharia
+              </div>
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Construindo Código que Sobrevive ao Tempo
+              </h2>
+            </div>
+
+            <!-- Texto de Abordagem -->
+            <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-zinc-300 text-sm leading-relaxed mb-8">
+              <p class="mb-2">
+                Graduando em <strong class="text-white">Análise e Desenvolvimento de Sistemas (IESB)</strong> e <strong class="text-white">Engenharia de Software (Anhanguera)</strong>.
+              </p>
+              <p class="text-zinc-400">
+                A abordagem: arquitetura sólida, contratos de API bem definidos, pipelines automatizados e integrações que não quebram com a evolução dos processos de negócio — como um holocron preservado para as próximas gerações.
+              </p>
+            </div>
+
+            <!-- Arcos de Desenvolvimento (Sci-Fi / RPG High-End) -->
+            <div class="space-y-4 mb-8">
+              
+              <!-- Arc 1 -->
+              <div class="p-4 rounded-xl bg-[#0f0f18] border border-white/5 hover:border-gold-400/30 transition-all flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-gold-400/10 text-gold-300 mt-0.5 flex-shrink-0">
+                  <i data-lucide="telescope" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-gold-300 uppercase tracking-wider font-semibold">Current Arc</div>
+                  <div class="text-sm text-zinc-300 mt-0.5">
+                    Engenharia e sustentação de ERPs de Alta Disponibilidade (<strong class="text-white">TOTVS Protheus &amp; Fluig</strong>) com orquestração de processos analíticos e preditivos em <strong class="text-white">Python</strong>.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arc 2 -->
+              <div class="p-4 rounded-xl bg-[#0f0f18] border border-white/5 hover:border-cyan-400/30 transition-all flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-cyan-400/10 text-cyan-300 mt-0.5 flex-shrink-0">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-cyan-300 uppercase tracking-wider font-semibold">Stack Expansion</div>
+                  <div class="text-sm text-zinc-300 mt-0.5">
+                    Aprofundamento contínuo em <strong class="text-white">TL++ Orientado a Objetos</strong>, esteiras de aprovação dinâmicas no Fluig BPMN, consumo de APIs RESTful e interfaces ágeis com <strong class="text-white">PO-UI &amp; Modern Web</strong>.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arc 3 -->
+              <div class="p-4 rounded-xl bg-[#0f0f18] border border-white/5 hover:border-emerald-400/30 transition-all flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-emerald-400/10 text-emerald-300 mt-0.5 flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-emerald-300 uppercase tracking-wider font-semibold">The Code</div>
+                  <div class="text-sm text-zinc-300 mt-0.5">
+                    <span class="italic text-zinc-200 font-mono">"Do or do not, there is no try."</span> — Priorizo commits atômicos, resiliência em transações financeiras críticas, queries SQL otimizadas e governança estrita de dados.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Citação Sci-Fi / Holocron em Banner Luxuoso -->
+            <div class="relative p-6 rounded-2xl bg-gradient-to-r from-blue-950/40 via-[#0e0e18] to-gold-950/30 border border-white/10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <div class="font-display italic text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-white to-gold-200">
+                  "May the Source be with you."
+                </div>
+                <div class="text-xs font-mono text-zinc-400 mt-1">
+                  Engenharia e inteligência aplicada do ERP ao insight final.
+                </div>
+              </div>
+              <a href="#terminal" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white font-mono text-xs tracking-wider transition-all flex items-center gap-2 flex-shrink-0">
+                <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400"></i>
+                Abrir Terminal
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
