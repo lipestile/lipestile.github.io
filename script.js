@@ -117,6 +117,7 @@ function initTerminal() {
   <span class="text-emerald-400">totvs</span>      - Competências em TOTVS Protheus, ADVPL e TL++
   <span class="text-emerald-400">fluig</span>      - Soluções de BPM, ECM, WCM e Workflows
   <span class="text-emerald-400">python</span>     - Arquitetura de Dados, ETL e Pandas
+  <span class="text-emerald-400">github</span>     - Práticas de Git, GitHub Actions, CI/CD e repositórios
   <span class="text-emerald-400">stack</span>      - Resumo completo da stack Full Stack & Data
   <span class="text-emerald-400">cases</span>      - Projetos e soluções corporativas entregues
   <span class="text-emerald-400">whoami</span>     - Resumo do perfil profissional
@@ -153,6 +154,14 @@ function initTerminal() {
   - Limpeza, tratamento e agregação estatística com <span class="text-indigo-200">Pandas & NumPy</span>
   - Automação de tarefas operacionais, conciliações financeiras e disparo de relatórios
   - Construção de pipelines de dados confiáveis e rotinas agendadas (Cron / Task Scheduler)
+`,
+    github: `
+<div class="text-gold-300 font-semibold mb-1">GitHub &amp; DevOps Expertise:</div>
+  - Versionamento profissional com <span class="text-gold-200">Git Flow, Conventional Commits e Pull Requests</span>
+  - Configuração de esteiras automatizadas de CI/CD com <span class="text-emerald-400">GitHub Actions</span>
+  - Publicação e automação de landing pages técnicas e documentações com <span class="text-cyan-300">GitHub Pages</span>
+  - Gestão de repositórios, code review e segurança de branches protegidas
+  - Perfil oficial: <a href="https://github.com/felipecarvalho" target="_blank" class="text-gold-300 underline font-bold">github.com/felipecarvalho</a>
 `,
     stack: `
 <div class="text-zinc-200 font-semibold mb-1">Resumo da Stack:</div>
