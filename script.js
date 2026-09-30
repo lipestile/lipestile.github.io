@@ -169,15 +169,15 @@ function initTerminal() {
   4. <span class="text-emerald-200">Portal Operacional PO-UI:</span> Interface web ágil para operadores com backend integrado via API REST.
 `,
     whoami: `
-<div class="text-gold-300 font-semibold">Perfil Profissional:</div>
-  Desenvolvedor Full Stack TOTVS e Analista de Dados.
-  Focado em transformar processos manuais lentos em sistemas automatizados, eficientes e escaláveis.
+<div class="text-gold-300 font-semibold">Felipe Carvalho:</div>
+  Desenvolvedor Full Stack TOTVS (Protheus & Fluig) &amp; Analista de Dados com Python.
+  Especialista em unir ERPs robustos a interfaces modernas e pipelines preditivos de dados.
 `,
     contact: `
-<div class="text-gold-300 font-semibold mb-1">Contatos Oficiais:</div>
-  &bull; <span class="text-zinc-400">E-mail:</span> Clique no botão "Copiar E-mail" na seção de contato
-  &bull; <span class="text-zinc-400">WhatsApp:</span> Disponível no link direto abaixo
-  &bull; <span class="text-zinc-400">GitHub & LinkedIn:</span> Perfis profissionais disponíveis no rodapé
+<div class="text-gold-300 font-semibold mb-1">Contatos de Felipe Carvalho:</div>
+  &bull; <span class="text-zinc-400">GitHub:</span> <a href="https://github.com/felipecarvalho" target="_blank" class="text-gold-300 underline">github.com/felipecarvalho</a>
+  &bull; <span class="text-zinc-400">LinkedIn:</span> <a href="https://linkedin.com/in/felipecarvalho" target="_blank" class="text-blue-300 underline">linkedin.com/in/felipecarvalho</a>
+  &bull; <span class="text-zinc-400">E-mail:</span> Disponível no botão "Copiar E-mail" da página
 `
   };
 
