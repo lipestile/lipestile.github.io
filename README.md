@@ -21,39 +21,21 @@ Uma landing page profissional, minimalista e luxuosa desenvolvida especialmente 
 
 Existem duas formas fáceis de colocar sua página no ar gratuitamente:
 
-### Opção 1: Seu site principal do GitHub (`seu-usuario.github.io`) [Recomendado]
+### Opção 1: Seu site principal do GitHub (`lipestile.github.io`) [Recomendado]
 
 1. Crie um novo repositório no seu GitHub com o nome exato:
+   ```text
+   lipestile.github.io
    ```
-   seu-usuario.github.io
-   ```
-   *(Substitua `seu-usuario` pelo seu username do GitHub).*
 
 2. No terminal da sua máquina, dentro desta pasta (`/Users/aluno1/.gemini/antigravity/scratch/portfolio-totvs-data`), execute:
    ```bash
-   git remote add origin https://github.com/seu-usuario/seu-usuario.github.io.git
-   git branch -M main
-   git push -u origin main
+   ./deploy.sh
    ```
+   *(Ou manualmente: `git push -u origin main`)*
 
-3. Pronto! Em instantes seu portfólio estará no ar no endereço:  
-   👉 **`https://seu-usuario.github.io`**
-
----
-
-### Opção 2: Em um repositório de projeto (ex: `portfolio`)
-
-1. Crie um repositório chamado `portfolio` (ou qualquer outro nome) no GitHub.
-2. Execute os comandos:
-   ```bash
-   git remote add origin https://github.com/seu-usuario/portfolio.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. No GitHub, vá em **Settings** > **Pages**.
-4. Em **Branch**, selecione `main` e a pasta `/(root)`, e clique em **Save**.
-5. Seu site estará disponível em:  
-   👉 **`https://seu-usuario.github.io/portfolio`**
+3. Pronto! Em instantes seu portfólio estará no ar no endereço oficial:  
+   👉 **`https://lipestile.github.io`**
 
 ---
 

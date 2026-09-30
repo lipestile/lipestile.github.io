@@ -161,7 +161,7 @@ function initTerminal() {
   - Configuração de esteiras automatizadas de CI/CD com <span class="text-emerald-400">GitHub Actions</span>
   - Publicação e automação de landing pages técnicas e documentações com <span class="text-cyan-300">GitHub Pages</span>
   - Gestão de repositórios, code review e segurança de branches protegidas
-  - Perfil oficial: <a href="https://github.com/felipecarvalho" target="_blank" class="text-gold-300 underline font-bold">github.com/felipecarvalho</a>
+  - Perfil oficial: <a href="https://github.com/lipestile" target="_blank" class="text-gold-300 underline font-bold">github.com/lipestile</a>
 `,
     stack: `
 <div class="text-zinc-200 font-semibold mb-1">Resumo da Stack:</div>
@@ -184,8 +184,8 @@ function initTerminal() {
 `,
     contact: `
 <div class="text-gold-300 font-semibold mb-1">Contatos de Felipe Carvalho:</div>
-  &bull; <span class="text-zinc-400">GitHub:</span> <a href="https://github.com/felipecarvalho" target="_blank" class="text-gold-300 underline">github.com/felipecarvalho</a>
-  &bull; <span class="text-zinc-400">LinkedIn:</span> <a href="https://linkedin.com/in/felipecarvalho" target="_blank" class="text-blue-300 underline">linkedin.com/in/felipecarvalho</a>
+  &bull; <span class="text-zinc-400">GitHub:</span> <a href="https://github.com/lipestile" target="_blank" class="text-gold-300 underline font-semibold">github.com/lipestile</a>
+  &bull; <span class="text-zinc-400">LinkedIn:</span> <a href="https://linkedin.com/in/felipecarvalho" target="_blank" class="text-blue-300 underline font-semibold">linkedin.com/in/felipecarvalho</a>
   &bull; <span class="text-zinc-400">E-mail:</span> Disponível no botão "Copiar E-mail" da página
 `
   };

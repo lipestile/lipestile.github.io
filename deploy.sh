@@ -6,7 +6,7 @@
 
 set -e
 
-GITHUB_USER="felipecarvalho"
+GITHUB_USER="lipestile"
 REPO_NAME="${GITHUB_USER}.github.io"
 REPO_URL="https://github.com/${GITHUB_USER}/${REPO_NAME}.git"
 
